@@ -1,8 +1,12 @@
 import requests
 from loginData import login_data
+from util_package.config import getConfig
+
+config = getConfig()
+BASE_URL = config['API']['base_url']
 
 print(login_data())
-token_data = requests.post('https://restful-booker.herokuapp.com/auth',
+token_data = requests.post(BASE_URL+'/auth',
                             verify=False,
                             json=login_data(),
                             headers={'Content-Type': 'application/json'})

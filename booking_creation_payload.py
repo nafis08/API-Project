@@ -1,4 +1,4 @@
-def booking_creation():
+def booking_creation_payload(firstname, lastname, totalprice, depositpaid, checkin, checkout, additionalneeds):
     """
     This function is responsible for creating a booking.
     It will be called by the main function to handle the booking process.
@@ -9,14 +9,14 @@ def booking_creation():
     # For demonstration purposes, we'll just simulate this with a print statement.
 
     booking_details = {
-                  "firstname": "Nafis",
-                  "lastname": "F18",
-                  "totalprice": 111,
-                  "depositpaid": True,
+                  "firstname": firstname,
+                  "lastname": lastname,
+                  "totalprice": totalprice,
+                  "depositpaid": depositpaid,
                   "bookingdates": {
-                      "checkin": "2023-10-01",
-                      "checkout": "2023-10-10"
+                      "checkin": checkin,
+                      "checkout": checkout
                   },
-                  "additionalneeds": "Breakfast"
+                  "additionalneeds": additionalneeds
               }
     return booking_details
