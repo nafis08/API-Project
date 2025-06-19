@@ -1,13 +1,14 @@
 import requests
 import configparser
-from booking_creation import booking_creation
+from booking_creation_payload import booking_creation_payload
 from util_package.config import *
 
 config = getConfig()
+BASE_URL = config['API']['base_url']
 # Create a new booking using the API
-add_booking = requests.post(config['API']['base_url'] + '/booking',
+add_booking = requests.post(BASE_URL + '/booking',
                             verify=False,
-                            json=booking_creation(),
+                            json=booking_creation_payload('Nafisa', 'Khan', 100, True, '2023-10-01', '2023-10-05', 'Breakfast'),
                             headers={'Content-Type': 'application/json', 'Accept': 'application/json'}, )
 
 #print(type(add_booking))

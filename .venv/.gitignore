@@ -13,3 +13,6 @@ venv/
 
 # Environment variables
 .env
+
+#reports
+reports/allure-results/
