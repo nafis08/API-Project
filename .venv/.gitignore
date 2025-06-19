@@ -12,4 +12,4 @@ venv/
 .idea/
 
 # Environment variables
-#.env
+.env
