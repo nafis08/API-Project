@@ -69,6 +69,7 @@ open reports/allure-report/index.html
 --> API_deleteAPI.py - deletes a booking
 
 📁 Project Structure
+graphql
 API-Project/
 ├── features/                 # BDD feature files & step definitions
 ├── util_package/            # Config & utility functions
